@@ -16906,7 +16906,7 @@ HJySJEmSJElSzzg4JUmSJEmSpJ75C1vMzII86biUAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> maximum depth 10: as more points are added to the training curve it stays a little below 1.0, which looks like a perfect model indicating overfitting. Since the testing curve converges towards ~0.7 we can confirm that our model is overfitting. In this case adding more training points would help the model to overcome overfitting, since our model would become more general.</p>
+<p><strong>Answer: </strong> maximum depth 10: as more points are added to the training curve it stays a little below 1.0, which looks like a perfect model indicating overfitting. Since the testing score is starting to diverge at 250 points from an optimal score, adding more data will probably not improve the model in terms of fitting much more.</p>
 
 </div>
 </div>
@@ -17720,7 +17720,8 @@ Also i think having the best validation score with the least max. depth makes th
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The k-fold cross validation method splits the training data into k sets each having a different test set with a length of data.length/k.</p>
+<p><strong>Answer: </strong> Cross-Validation in general helps to improve the model to be more generalized to behave better with unseen data. In order to achieve this, cross-validation seperates our data into multiple segments, e.g. 5. It then makes 5 datasets for which 4 segments are training and 1 segment is test data, where the test data is distinct over all 5 datasets. These 5 datasets validated against our model.</p>
+<p>The k-fold cross validation method splits the training data into k sets each having a different test set with a length of data.length/k.</p>
 <p>Optimizing a model involves finding the best parameters for an estimator by using grid search. When validating the parametrized models against the data with a single validation set, the models tend to be overfitted. By introducing k-fold cross-validation to the process, the parametrized models can be validated against different training/test sets, which allows to counter overfitting.</p>
 <p>Remark: a test set should be retained before applying cross validation, otherwise our model would be influenced by the test set.</p>
 
