@@ -2,3 +2,7 @@
 /ml-20m
 /ml-latest-small
 /data
+/DeepLearningMovies/data
+Bag_of_Words_model.csv
+*.pyc
+test.png
